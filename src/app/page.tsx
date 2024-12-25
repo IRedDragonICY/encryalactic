@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import "tailwindcss/tailwind.css";
+import Image from "next/image";
+import icon from "../../public/icon.png";
 
 const galacticMap: Record<string, string> = {
     A: "ᔑ", B: "ʖ", C: "ᓵ", D: "↸", E: "ᒷ", F: "⎓", G: "⊣", H: "⍑", I: "╎", J: "⋮",
@@ -140,6 +142,7 @@ export default function Home() {
             <SpaceBackground />
 
             <main className="flex-grow flex flex-col items-center justify-center p-4 animate-[fadeIn_1.2s_ease-in-out]">
+                <Image src={icon} alt="Icon" width={128} height={128} className="mb-4" />
                 <h1 className="text-5xl font-extrabold mb-8 animate-bounce">
                     Encryalactic
                 </h1>
