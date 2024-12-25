@@ -95,6 +95,7 @@ function SpaceBackground() {
                     star.x = Math.random() * canvas.width;
                 }
 
+                // Efek interaksi mouse
                 const dx = star.x - mousePos.current.x;
                 const dy = star.y - mousePos.current.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
@@ -138,14 +139,23 @@ export default function Home() {
         <div className="min-h-screen flex flex-col text-gray-200 relative overflow-hidden">
             <SpaceBackground />
 
-            <main className="flex-grow flex flex-col items-center justify-center p-4">
-                <h1 className="text-5xl font-bold mb-8 animate-bounce">Encryalactic</h1>
+            <main className="flex-grow flex flex-col items-center justify-center p-4 animate-[fadeIn_1.2s_ease-in-out]">
+                <h1 className="text-5xl font-extrabold mb-8 animate-bounce">
+                    Encryalactic
+                </h1>
 
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="flex flex-col items-center w-full md:w-auto">
                         <h2 className="text-xl font-semibold mb-2">Plaintext</h2>
                         <textarea
-                            className="w-full md:w-80 h-40 p-4 rounded-lg shadow-lg border-2 bg-gray-800 border-gray-700 focus:ring-4 focus:ring-blue-500"
+                            className="
+                w-full md:w-80 h-40
+                p-4 rounded-xl shadow-xl
+                bg-white/10 backdrop-blur-sm border border-white/20
+                focus:ring-4 focus:ring-blue-500
+                resize-none
+                transition-all duration-300 hover:shadow-2xl
+              "
                             placeholder="Input text..."
                             value={plain}
                             onChange={(e) => {
@@ -158,7 +168,14 @@ export default function Home() {
                     <div className="flex flex-col items-center w-full md:w-auto">
                         <h2 className="text-xl font-semibold mb-2">Ciphertext</h2>
                         <textarea
-                            className="w-full md:w-80 h-40 p-4 rounded-lg shadow-lg border-2 bg-gray-800 border-gray-700 focus:ring-4 focus:ring-blue-500"
+                            className="
+                w-full md:w-80 h-40
+                p-4 rounded-xl shadow-xl
+                bg-white/10 backdrop-blur-sm border border-white/20
+                focus:ring-4 focus:ring-blue-500
+                resize-none
+                transition-all duration-300 hover:shadow-2xl
+              "
                             placeholder="Encrypted text..."
                             value={cipher}
                             onChange={(e) => {
