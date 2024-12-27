@@ -1,4 +1,3 @@
-```markdown
 # Encryalactic
 
 Encryalactic is a web application that allows users to encrypt and decrypt text using a custom galactic alphabet. The application features a dynamic space background with animated stars.
@@ -51,4 +50,3 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Author
 
 Created with ❤️ by Hendianto Mohammad Farid CB24153 UMPSA
-```
