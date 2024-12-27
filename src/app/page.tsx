@@ -97,7 +97,6 @@ function SpaceBackground() {
                     star.x = Math.random() * canvas.width;
                 }
 
-                // Efek interaksi mouse
                 const dx = star.x - mousePos.current.x;
                 const dy = star.y - mousePos.current.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
